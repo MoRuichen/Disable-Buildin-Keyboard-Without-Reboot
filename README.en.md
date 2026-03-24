@@ -13,36 +13,6 @@ When disabled, it only intercepts the keyboard device you selected. External key
 - `scripts/`: build, test, and packaging scripts
 - `vendor/`: bundled Interception dependency files
 
-## Build And Package
-
-Build the Release version:
-
-```powershell
-.\scripts\build.ps1
-```
-
-Run tests:
-
-```powershell
-.\scripts\test.ps1
-```
-
-Package release files into `dist/`:
-
-```powershell
-.\scripts\publish.ps1
-```
-
-## Release Package Contents
-
-The release zip usually contains these files:
-
-- `SwitchKeyboardTray.exe`
-- `interception.dll`
-- `install-interception.exe`
-- `README.md`
-- `README.en.md`
-
 ## Usage
 
 ### 1. Install The Interception Driver
@@ -103,21 +73,6 @@ Please confirm:
 1. You ran `.\install-interception.exe /install` in an elevated terminal
 2. You rebooted the computer
 3. `interception.dll` is in the same folder as `SwitchKeyboardTray.exe`
-
-### The device list is hard to understand
-
-The app tries to show Windows keyboard names such as:
-
-- `PS/2 Standard Keyboard`
-- `HID Keyboard Device`
-
-If several devices look similar, try one that seems like the built-in keyboard first. If it is wrong, use the re-selection option from the tray menu.
-
-## Config And Logs
-
-The app stores config and logs in:
-
-`%APPDATA%\SwitchKeyboardTray`
 
 ## Dependency
 

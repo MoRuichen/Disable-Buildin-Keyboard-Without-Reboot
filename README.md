@@ -13,36 +13,6 @@
 - `scripts/`：构建、测试、打包脚本
 - `vendor/`：Interception 相关依赖文件
 
-## 开发和打包
-
-构建 Release：
-
-```powershell
-.\scripts\build.ps1
-```
-
-运行测试：
-
-```powershell
-.\scripts\test.ps1
-```
-
-打包发布文件到 `dist/`：
-
-```powershell
-.\scripts\publish.ps1
-```
-
-## 发布包内容
-
-Release 压缩包通常包含这些文件：
-
-- `SwitchKeyboardTray.exe`
-- `interception.dll`
-- `install-interception.exe`
-- `README.md`
-- `README.en.md`
-
 ## 使用方法
 
 ### 1. 安装 Interception 驱动
@@ -103,21 +73,6 @@ SwitchKeyboardTray.exe
 1. 已用管理员权限执行 `.\install-interception.exe /install`
 2. 已重启电脑
 3. `interception.dll` 与 `SwitchKeyboardTray.exe` 在同一目录
-
-### 选设备时看不懂列表
-
-程序会尽量显示 Windows 里的键盘名称，例如：
-
-- `PS/2 标准键盘`
-- `HID Keyboard Device`
-
-如果有多个相似设备，可以先选内置键盘试一下；不对的话，再用“重新选择内置键盘”切换。
-
-## 配置和日志
-
-程序会把配置和日志写到：
-
-`%APPDATA%\SwitchKeyboardTray`
 
 ## 依赖说明
 
