@@ -21,6 +21,7 @@ Copy-Item (Join-Path $releaseDir "SwitchKeyboardTray.exe") $distDir -Force
 Copy-Item $dll $distDir -Force
 Copy-Item $installer $distDir -Force
 Copy-Item (Join-Path $PSScriptRoot "..\README.md") $distDir -Force
+Copy-Item (Join-Path $PSScriptRoot "..\README.en.md") $distDir -Force
 
 Compress-Archive -Path (Join-Path $distDir "*") -DestinationPath $zipPath -Force
 

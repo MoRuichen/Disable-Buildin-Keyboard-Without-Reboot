@@ -1,3 +1,5 @@
+[中文](./README.md) | [English](./README.en.md)
+
 # SwitchKeyboardTray
 
 一个 Windows 托盘小工具，用来切换“笔记本内置键盘是否可输入”。
@@ -31,14 +33,15 @@
 .\scripts\publish.ps1
 ```
 
-## 文件说明
+## 发布包内容
 
-压缩包内通常只有这几个文件：
+Release 压缩包通常包含这些文件：
 
 - `SwitchKeyboardTray.exe`
 - `interception.dll`
 - `install-interception.exe`
 - `README.md`
+- `README.en.md`
 
 ## 使用方法
 
@@ -116,7 +119,7 @@ SwitchKeyboardTray.exe
 
 `%APPDATA%\SwitchKeyboardTray`
 
-## 说明
+## 依赖说明
 
 本工具依赖 Interception 驱动。
 
