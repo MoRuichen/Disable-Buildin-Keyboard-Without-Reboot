@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A1C1A67D-8AF4-4C93-9B6A-30F4EB66FDF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SwitchKeyboardTray</RootNamespace>
+    <AssemblyName>SwitchKeyboardTray</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\vendor\Interception\Interception\library\x64\interception.dll">
+      <Link>interception.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCoordinator.cs" />
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="AppConfigStore.cs" />
+    <Compile Include="AppPaths.cs" />
+    <Compile Include="DeviceSelectionResolver.cs" />
+    <Compile Include="KeyboardDeviceDisplayNameBuilder.cs" />
+    <Compile Include="KeyboardFriendlyNameProvider.cs" />
+    <Compile Include="FileLogger.cs" />
+    <Compile Include="IKeyboardInterceptionService.cs" />
+    <Compile Include="InterceptionKeyboardService.cs" />
+    <Compile Include="InterceptionNative.cs" />
+    <Compile Include="KeyboardDeviceInfo.cs" />
+    <Compile Include="KeyboardDeviceProvider.cs" />
+    <Compile Include="MainApplicationContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="SelectionForm.cs" />
+    <Compile Include="StateController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
